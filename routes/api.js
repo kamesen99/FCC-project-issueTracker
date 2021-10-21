@@ -14,6 +14,7 @@ module.exports = function (app, myDatabase) {
       });
       
     })
+    //Template for json form data:
     // { 
     //   "_id": "5871dda29faedc3491ff93bb",
     //   "issue_title": "Fix error in posting data",
