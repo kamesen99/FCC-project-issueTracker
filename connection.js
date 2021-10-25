@@ -18,5 +18,6 @@ async function main(callback) {
         console.error(e);
         throw new Error('Unable to Connect to Database')
     }
-    
 }
+
+module.exports = main;
