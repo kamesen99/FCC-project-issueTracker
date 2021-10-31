@@ -23,3 +23,9 @@ app.route('/:project/')
   .get(function (req, res) {
     res.sendFile(process.cwd() + '/views/issue.html');
   });
+
+  //Index page (static HTML)
+app.route('/')
+.get(function (req, res) {
+  res.sendFile(process.cwd() + '/views/index.html');
+});
