@@ -32,3 +32,12 @@ app.route('/')
 
 //For FCC testing purposes
 fccTestingRoutes(app);
+
+myDB(async client => {
+  const myDataBase = await client.db('database').collection('users');
+  
+}).catch(e => {
+  app.route('/').get((req, res) => {
+    res.status(500).type('text').send(e);
+  });
+});
