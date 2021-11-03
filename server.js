@@ -38,8 +38,15 @@ myDB(async client => {
   //Routing for API
   apiRoutes(app, myDataBase);
 
-}).catch(e => {
-  app.route('/').get((req, res) => {
-    res.status(500).type('text').send(e);
-  });
+  }).catch(e => {
+    app.route('/').get((req, res) => {
+      res.status(500).type('text').send(e);
+    });
+});
+
+//404 Not Found Middleware
+app.use(function(req, res, next) {
+  res.status(404)
+    .type('text')
+    .send('Not Found');
 });
