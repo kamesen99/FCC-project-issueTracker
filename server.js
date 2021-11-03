@@ -50,3 +50,5 @@ app.use(function(req, res, next) {
     .type('text')
     .send('Not Found');
 });
+
+module.exports = app; //for testing
